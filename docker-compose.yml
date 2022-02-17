@@ -1,0 +1,21 @@
+
+version: '3.9'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/opt/webapp
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=webapp
+      - POSTGRES_PASSWORD=changeme

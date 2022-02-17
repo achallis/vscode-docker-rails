@@ -1,0 +1,14 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+  "forwardPorts": [3000],
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "rebornix.ruby",
+    "connorshea.vscode-ruby-test-adapter",
+    "actboy168.tasks",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "features": {
+    "docker-in-docker": "latest"
+  }
+}
